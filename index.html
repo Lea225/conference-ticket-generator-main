@@ -30,7 +30,9 @@
     <div class="form-group">
       <label for="avatar">Upload Avatar</label>
       <div class="file-upload">
-        <img class="icon-upload" src="assets/images/icon-upload.svg" alt="icon-upload">
+        <div class="upload">
+          <img class="icon-upload" src="assets/images/icon-upload.svg" alt="icon-upload">
+        </div>
         <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" class="file-input">
         <span class="file-hint">Drag and drop or click to upload</span>
         <!-- Contenu à afficher après la sélection de l'image -->
@@ -72,20 +74,23 @@
     <h2>Congrats, <span class="ticket-title-name" id="ticket-title-name"></span>! Your ticket is ready.</h2> <!-- ticket-name -->
     <p class="ticket-text">We've emailed your ticket to <span class="ticket-email" id="ticket-email"></span> and will send updates in the run-up to the event.</p> <!-- ticket-email -->
     <div class="ticket-card">
+      <div class="ticket-container">
         <div class="ticket-header">
-            <img src="assets/images/logo-full.svg" alt="logo-mark">
-            <p class="ticket-location">Jan 31, 2025 / Austin, TX</p>
-        </div>
-        <div class="ticket-body">
-            <div class="ticket-avatar" id="ticket-avatar"></div>
-            <div class="ticket-details">
-                <h4 id="ticket-name"></h4> <!-- ticket-name (2) -->
-                <div>
-                  <img src="assets/images/icon-github.svg" alt="icon-github">
-                  <p id="ticket-github"></p>
-                </div>
-            </div>
-        </div>
+          <img src="assets/images/logo-full.svg" alt="logo-mark">
+          <p class="ticket-location">Jan 31, 2025 / Austin, TX</p>
+      </div>
+      <div class="ticket-body">
+          <div class="ticket-avatar" id="ticket-avatar"></div>
+          <div class="ticket-details">
+              <h4 id="ticket-name"></h4> <!-- ticket-name (2) -->
+              <div>
+                <img src="assets/images/icon-github.svg" alt="icon-github">
+                <p id="ticket-github"></p>
+              </div>
+          </div>
+      </div>
+      </div>
+        <div class="ticket-number">#01609</div>
     </div>
 </div>
 
@@ -97,7 +102,7 @@
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Léa CHIDAS</a>.
   </div>
 </body>
 </html>

@@ -117,7 +117,6 @@ input:focus {
     border: 2px dashed var(--neutral-500);
     border-radius: 10px;
     padding: 1.5rem;
-    display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
@@ -207,10 +206,13 @@ input:focus {
     min-height: 100vh; /* Occupe toute la hauteur de l'écran */
 }
 
-.ticket-card{
-    width: 100%;
+.ticket-card {
+    width: 400px;
     padding: 20px;
-    background-size: 100% cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-size: contain;
     background-repeat: no-repeat;
     background-image: url('assets/images/pattern-ticket.svg');
 }
@@ -220,6 +222,13 @@ input:focus {
     line-height: 1.5;
     padding-bottom: 2rem;
     color: var(--neutral-300);
+}
+
+.ticket-number{
+    font-size: 1.3em;
+    font-weight: 700;
+    rotate: 90deg;
+    color: var(--neutral-500);
 }
 
 .ticket-location{
