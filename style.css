@@ -213,9 +213,9 @@ input:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-image: url('assets/images/pattern-ticket.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .ticket-text{
@@ -301,8 +301,8 @@ input:focus {
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 0.5rem;
+    body{
+        padding: 0.8rem;
     }
     .container {
         max-width: 100%;
@@ -314,7 +314,21 @@ input:focus {
     .ticket-text{
         width: 100%;
     }
+    .ticket-card,#ticket-github{
+        font-size: 0.8em;
+    }
     .ticket-card{
-        width: 90%;
+        max-width: 300px;
+    }
+    .ticket-avatar {
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+    }
+    .ticket-details div{
+        gap: 0px;
+    }
+    .ticket-body {
+        margin-top: 0.7rem;
     }
 }

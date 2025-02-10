@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
         infoText.textContent = message;
 
         if (fileInfoIcon) { // Vérifie si l'icône existe
-            fileInfoIcon.src = isError ? "assets/images/icon-info-error.svg" : "chemin/vers/icon-info.png";
+            fileInfoIcon.src = isError ? "assets/images/icon-info - error.svg" : "assets/images/icon-info.svg";
         }
 
         if (isError) {
@@ -80,11 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
         mainSection.style.display = 'none';
         ticketSection.classList.remove('hidden');
         ticketSection.style.display = 'flex';
-
+    
         ticketName.textContent = nameInput.value.trim();
         ticketEmail.textContent = emailInput.value.trim();
         ticketGithub.textContent = githubInput.value.trim();
-
+    
+        // Mise à jour du nom dans le titre du ticket
+        const ticketTitleName = document.getElementById('ticket-title-name'); 
+        ticketTitleName.textContent = nameInput.value.trim();
+    
         const file = avatarInput.files[0];
         if (file) {
             const reader = new FileReader();
@@ -93,9 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             reader.readAsDataURL(file);
         }
-
+    
         ticketSection.scrollIntoView({ behavior: 'smooth' });
-    }
+    }    
 
     function validateForm() {
         let isValid = true;
@@ -155,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         error.className = 'error-message';
 
         const icon = document.createElement('img');
-        icon.src = "assets/images/icon-info-error.svg"; // Image d'erreur
+        icon.src = "assets/images/icon-info - error.svg"; // Image d'erreur
         icon.style.width = "16px";
         icon.style.height = "16px";
         icon.style.marginRight = "5px";
